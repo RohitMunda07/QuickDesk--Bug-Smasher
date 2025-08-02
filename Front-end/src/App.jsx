@@ -8,7 +8,8 @@ import {
   Dashboard,
   UserProfile,
   Signup,
-  Home
+  Home,
+  ResetPassword
 } from './components/index.js'
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/ForgetPassword" element={<ResetPassword />} />
         <Route path="/create-ticket" element={<CreateTicket />} />
         <Route path="/user-profile" element={<UserProfile />} />
         {/* {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}

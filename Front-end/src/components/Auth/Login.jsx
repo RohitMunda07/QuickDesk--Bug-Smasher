@@ -197,7 +197,7 @@ const QuickDeskLogin = () => {
 
                     {/* Footer Links */}
                     <div className="text-center mt-6">
-                        <a href="#" className="text-blue-400 hover:text-blue-300 text-sm transition-colors">
+                        <a href="/ForgetPassword" className="text-blue-400 hover:text-blue-300 text-sm transition-colors">
                             Forgot your password?
                         </a>
                     </div>
