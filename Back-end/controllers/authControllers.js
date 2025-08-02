@@ -2,6 +2,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const userModel = require("./../models/userModel");
 const transporter = require("./../config/nodemailer");
+const { uploadCloudinary } = require("./utils/cloudinary");
 
 
 // Register
