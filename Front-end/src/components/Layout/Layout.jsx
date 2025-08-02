@@ -6,7 +6,7 @@ export default function Layout() {
     return (
         <>
             <Header />
-            <div className='flex-col grow'>
+            <div className='mt-5 flex-col grow'>
                 <Outlet />
             </div>
             <Footer />

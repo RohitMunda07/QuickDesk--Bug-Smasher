@@ -3,7 +3,6 @@ import { Search, Bell, Clock, RotateCcw, CheckCircle, Plus, ArrowRight, Info } f
 
 const Dashboard = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [bellAnimation, setBellAnimation] = useState(false);
 
   const tickets = [
     {
@@ -41,10 +40,7 @@ const Dashboard = () => {
     ticket.id.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const handleBellClick = () => {
-    setBellAnimation(true);
-    setTimeout(() => setBellAnimation(false), 500);
-  };
+  
 
   const handleCreateTicket = () => {
     alert('Create New Ticket modal would open here!');
@@ -85,32 +81,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F4FF] p-6">
-      {/* Header */}
-      <div className="bg-white rounded-xl p-6 flex justify-between items-center mb-6">
-        <div className="text-xl font-bold text-indigo-600 flex items-center gap-2">
-          <span className="text-2xl">🎟</span> SupportHub
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <input
-              type="text"
-              placeholder="Search tickets..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-4 py-2 rounded-full bg-indigo-50 outline-none"
-            />
-          </div>
-          {/* Bell Icon */}
-          <Bell
-            className={`w-5 h-5 text-gray-600 cursor-pointer hover:scale-110 transition ${bellAnimation ? 'animate-bounce' : ''}`}
-            onClick={handleBellClick}
-          />
-          <div className="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">A</div>
-          <span className="hidden sm:block font-medium text-gray-700">Avinash</span>
-        </div>
-      </div>
+    <div className="min-h-screen p-6">
 
       {/* Welcome */}
       <div className="bg-indigo-50 rounded-xl p-6 mb-6">

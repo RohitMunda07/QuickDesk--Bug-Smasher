@@ -2,9 +2,14 @@ import { useState } from 'react'
 import Layout from './components/Layout/Layout'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Login from './components/Auth/Login'
-import Dashboard from './components/Dashboard/Dashboard'
-
+import {
+  CreateTicket,
+  Login,
+  Dashboard,
+  UserProfile,
+  Signup,
+  Home
+} from './components/index.js'
 
 
 function App() {
@@ -13,13 +18,15 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        {/* <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/create-ticket" element={<CreateTicket />} />
-        <Route path="/my-tickets" element={<MyTickets />} />
-        <Route path="/ticket/:id" element={<TicketDetails />} />
-        <Route path="/profile" element={<Profile />} /> */}
+        <Route path="/user-profile" element={<UserProfile />} />
+        {/* {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
+        {/* <Route path="/my-tickets" element={<MyTickets />} /> */}
+        {/* <Route path="/ticket/:id" element={<TicketDetails />} /> */}
       </Route>
     </Routes>
   )
