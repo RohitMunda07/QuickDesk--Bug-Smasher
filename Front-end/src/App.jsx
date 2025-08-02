@@ -3,6 +3,7 @@ import Layout from './components/Layout/Layout'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Login from './components/Auth/Login'
+import ResetPassword from './components/Auth/ForgetPassword'
 import Dashboard from './components/Dashboard/Dashboard'
 
 
@@ -15,8 +16,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route path='/login' element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        {/* <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/create-ticket" element={<CreateTicket />} />
+         <Route path="/ForgetPassword" element={<ResetPassword />} />
+        {/*<Route path="/create-ticket" element={<CreateTicket />} />
         <Route path="/my-tickets" element={<MyTickets />} />
         <Route path="/ticket/:id" element={<TicketDetails />} />
         <Route path="/profile" element={<Profile />} /> */}
