@@ -4,6 +4,7 @@ import Login from './Auth/Login'
 import Dashboard from "./Dashboard/Dashboard";
 import UserProfile from "../Pages/UserProfile.jsx";
 import Signup from "./Auth/Signup.jsx";
+import ForgetPassword from "./Auth/ForgetPassword.jsx"
 import Home from "../Pages/Home.jsx";
 
 export {
@@ -13,5 +14,6 @@ export {
     Dashboard,
     UserProfile,
     Signup,
-    Home
+    Home,
+    ForgetPassword
 }
